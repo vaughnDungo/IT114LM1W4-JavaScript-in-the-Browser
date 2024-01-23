@@ -32,30 +32,100 @@
         // Todo 2.1 Select the unordered list with the id "subjects-taken"
         // Resource: https://dev.to/alternate_robot/dom-selectors-in-javascript-344i
 
+        var subjectsTakenList = document.getElementById("subjects-taken");
+
         // Checkpoint 2.1 What are the other ways to select elements in the DOM?
         // Answer:
 
         // Todo 2.2 Set the text of the second list item to "IT102 - Python Fundamentals"
         // Resource: https://www.javascripttutorial.net/javascript-dom/javascript-get-child-element/
 
+        var subjectsTakenList = document.getElementById("subjects-taken");
+
+        // Check if the list and the second list item exist
+        if (subjectsTakenList && subjectsTakenList.children.length >= 2) {
+            // Access the second list item and set its text content
+            subjectsTakenList.children[1].textContent = "IT102 - Python Fundamentals";
+        }
+
         // Checkpoint 3.2 What is the difference between innerText, textContent, and innerHTML. When should you use one over the other?
         // Answer:
 
-        // Todo 2.3 Create another list item, and add it as a child of the unordered list
+        // Todo 2.3 Create another list item, and add it as a child of the unordered list  
         //          Set the text of the list item to your favorite subject
         // Resource: https://www.javascripttutorial.net/dom/manipulating/create-a-dom-element/
+
+        var subjectsTakenList = document.getElementById("subjects-taken");
+
+        if (subjectsTakenList) {
+            // Create a new list item
+            var newListItem = document.createElement("li");
+
+            // Set the text of the new list item to your favorite subject
+            newListItem.textContent = "Your Favorite Subject";
+
+            // Add the new list item as a child to the unordered list
+            subjectsTakenList.appendChild(newListItem);
+        }
+
 
         // Todo 2.4 Set the id attribute of the list item you created to "favorite-subject".
         //          Set the class of the list item to "newly-created"
 
+        var subjectsTakenList = document.getElementById("subjects-taken");
+
+        if (subjectsTakenList) {
+            // Create a new list item
+            var newListItem = document.createElement("li");
+
+            // Set the text of the new list item to your favorite subject
+            newListItem.textContent = "Your Favorite Subject";
+
+            // Set the id attribute of the new list item to "favorite-subject"
+            newListItem.id = "favorite-subject";
+
+            // Set the class of the new list item to "newly-created"
+            newListItem.classList.add("newly-created");
+
+            // Add the new list item as a child to the unordered list
+            subjectsTakenList.appendChild(newListItem);
+        }
+
+
         // Todo 2.5 Delete the third list item in the unordered list
+
+        var subjectsTakenList = document.getElementById("subjects-taken");
+
+        if (subjectsTakenList && subjectsTakenList.children.length >= 3) {
+            // Remove the third list item (index 2) from the unordered list
+            subjectsTakenList.removeChild(subjectsTakenList.children[2]);
+        }
 
         // Checkpoint 2.3 What is the difference between node and element?
         // Answer:
 
         // Bonus Todo 2.6 Select the parent of the unordered list.
 
+        var subjectsTakenList = document.getElementById("subjects-taken");
+
+        if (subjectsTakenList) {
+            // Select the parent node of the unordered list
+            var parentOfSubjectsTaken = subjectsTakenList.parentNode;
+
+            // Now, you can use 'parentOfSubjectsTaken' for further operations
+        }
         // Bonus Todo 2.7 Select the previous sibling of the list item you previously created
+
+        var favoriteSubjectListItem = document.getElementById("favorite-subject");
+
+        if (favoriteSubjectListItem) {
+            // Select the previous sibling of the list item
+            var previousSibling = favoriteSubjectListItem.previousElementSibling;
+
+            // Now, you can use 'previousSibling' for further operations
+        }
+
+
     </script>
 </body>
 
